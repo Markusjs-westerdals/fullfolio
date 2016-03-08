@@ -1,0 +1,26 @@
+$font-family: "Lato", sans-serif;
+
+body {
+  font-family: $font-family;
+  color: black;
+}
+
+h {
+  &1 {
+    font-size: 3em;
+  }
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  border-bottom: 1px solid;
+  border-bottom-width: 2px;
+  &:hover {
+    font-weight: 800;
+    border-bottom-width: 5px;
+  }
+}
+
+b {
+  font-weight: 700;
+}

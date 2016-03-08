@@ -1,0 +1,312 @@
+//
+// // * {
+// //   background: rgba(0, 0, 0, .2);
+// // }
+// .side-header {
+//   // text-align: center;
+//   // height: 100%;
+//   // width: 10%;
+//   // display: inline;
+// }
+// #fp-nav li .active span {
+//   background-color: red;
+// }
+//
+// .prev-name {
+//   top: 40%;
+//   font-size: 6em;
+//   font-weight: 300;
+//   color: white;
+//   text-align: center;
+//   line-height: .9em;
+//   letter-spacing: .02em;
+//   .bold {
+//     font-weight: 400;
+//   }
+//
+//   .italic {
+//     font-style: italic;
+//   }
+//
+//
+//   a {
+//     bottom: 0;
+//     color: rgba(255, 255, 255, 0.8);
+//     font-size: 4em;
+//     max-width: 2.2em;
+//     padding: .3em .5em;
+//     background-color: black;
+//     i {
+//       font-size: 0.8em;
+//       margin-left: 10px;
+//       font-weight: 100;
+//     }
+//   }
+//   .small {
+//     margin: 0 auto;
+//   }
+//   p {
+//     font-size: .5em;
+//     max-width: 70%;
+//     left: 10%;
+//
+//   }
+//   bottom: 42%;
+//   width: 50%;
+//   text-align: center;
+//   position: absolute;
+//   z-index: 100;
+// }
+// .read-more {
+//   @extend .prev-name;
+//   top: 50%;
+//   // left: 10%;
+//   i {
+//
+//     font-size: 0.4em;
+//   }
+//   a {
+//     background-color: transparent;
+//     color: white;
+//     font-size: .5em;
+//     font-weight: 600;
+//     text-decoration: underline;
+//   }
+// }
+//
+// .site-title {
+//   position: absolute;
+//   top: -190%;
+//   left: 2%;
+//   margin-top: -20px;
+// }
+//
+// .preview {
+//   height: 100vh;
+//   .name-wrap {
+//     position: absolute;
+//     text-align: center;
+//     display: inline-block;
+//     // height: 15em;
+//     // width: 100%;
+//     // z-index: 10;
+//     .name {
+//       padding: .5em;
+//       font-size: 3em;
+//       font-family: Lato;
+//       height: 100%;
+//
+//     }
+//
+//   }
+//   .img-dubi {
+//     background-color: blue;
+//     margin: 0 auto;
+//     max-width: 100%;
+//     height: 80%;
+//     //background-image: url("../img/dubi-medium.png");
+//     //background-size: 100%;
+//     background-position: top;
+//     background-repeat: no-repeat;
+//     @include bp(large) {
+//       float: left;
+//       margin: 0 0;
+//       width: 100%;
+//       height: 100%;
+//       background-image: url("../img/dubi_home_bg.png");
+//       background-size: cover;
+//       // background-size: 80%;
+//       // background-position-x: 40%;
+//       // background-position-y: 30%;
+//     }
+//     @include bp(medium) {
+//       height: 100%;
+//       // background-image: url("../img/dubi-medium.png");
+//       background-image: url("../img/dubi_home_bg.png");
+//       background-size: cover;
+//     }
+//   }
+//   .img-kutt {
+//     @extend .preview;
+//     // height: 100%;
+//     // width: 100%;
+//     background: url("../img/kutt.jpg");
+//     //background-size: cover;
+//   }
+// }
+//
+// .project-info {
+//   background-color: red;
+// }
+
+// #fullpage > div.section.folio.active.fp-section.fp-completely > div > div {
+//   height: 100% !important;
+//   width: 100% !important;
+// }
+
+.site-title {
+  @include bp(small) {
+    font-size: .5em;
+  }
+  @include bp(medium) {
+    font-size: .5em;
+  }
+}
+
+@mixin bg-image{
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+@mixin pj-info {
+  position: absolute;
+  text-align: center;
+  width: 90%;
+  font-size: 1.5em;
+  font-weight: 400;
+  letter-spacing: 3px;
+  line-height: 60px;
+  left: 2.5%;
+  @include bp(small) {
+    font-size: 1.5em;
+    line-height: 150%;
+  }
+  @include bp(medium) {
+    font-size: 3em;
+  }
+}
+@mixin bg-img-all {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    z-index: -1;
+
+    @include bp(medium) {
+      background:     linear-gradient(
+        rgba(0, 0, 0, 0.15),
+        rgba(0, 0, 0, 0.15)
+      ), url("../img/kutt_front_small.png");
+      background-size: 85%;
+      background-position-x: 100px;
+      background-position-y: 250px;
+      background-repeat: no-repeat;
+    }
+    @include bp(large) {
+      background:     linear-gradient(
+        rgba(0, 0, 0, 0.15),
+        rgba(0, 0, 0, 0.15)
+      ), url("../img/kutt_front_big.png");
+      background-size: 50%;
+      background-position: center;
+      -webkit-transform: rotate(30deg);
+      -moz-transform: rotate(30deg);
+      -ms-transform: rotate(30deg);
+      -o-transform: rotate(30deg);
+      transform: rotate(30deg);
+    }
+
+
+}
+.preview {
+  overflow: hidden;
+  // color: white;
+  height: 100%;
+  width: 100%;
+    &.img {
+      &-dubi {
+        background:     linear-gradient(
+          rgba(0, 0, 0, 0.45),
+          rgba(0, 0, 0, 0.45)
+        ), url("../img/dubi_home.png");
+        overflow: hidden;
+        &:before {
+          //@include bg-img-all;
+          @include bp(small) {
+            background:     linear-gradient(
+              rgba(0, 0, 0, 0.45),
+              rgba(0, 0, 0, 0.45)
+            ), url("../img/dubi_home.png");
+            // background-size: 100%;
+            // background-position-x: -300px;
+            // background-position-y: 150px;
+            // background-repeat: no-repeat;
+          }
+        }
+      }
+    }
+}
+//
+//   &.img {
+//     &-dubi {
+//       overflow: hidden;
+//       &:before {
+//         //@include bg-img-all;
+//         @include bp(small) {
+//           background:     linear-gradient(
+//             rgba(0, 0, 0, 0.45),
+//             rgba(0, 0, 0, 0.45)
+//           ), url("../img/dubi-ipad-copy.png");
+//           background-size: 100%;
+//           background-position-x: -300px;
+//           background-position-y: 150px;
+//           background-repeat: no-repeat;
+//
+//         }
+//       }
+//       .project-info {
+//         @include pj-info;
+//         top: 20%;
+//         @include bp(small) {
+//           // font-size: 1em;
+//         }
+//         @include bp(medium) {
+//           // font-size: 3em;
+//           left: 0%;
+//           width: 70%;
+//         }
+//       }
+//     }
+//     &-kutt {
+//       &:before {
+//         //@include bg-img-all;
+//         @include bp(small) {
+//           background:     linear-gradient(
+//             rgba(0, 0, 0, 0.15),
+//             rgba(0, 0, 0, 0.15)
+//           ), url("../img/kutt_front_small.png");
+//           background-size: 85%;
+//           background-position-x: 100px;
+//           background-position-y: 250px;
+//           background-repeat: no-repeat;
+//
+//         }
+//       }
+//       .project-info {
+//         @include pj-info;
+//         top: 20%;
+//         @include bp(small) {
+//           // font-size: 1em;
+//         }
+//         @include bp(medium) {
+//           // font-size: 3em;
+//           left: 0%;
+//           width: 70%;
+//         }
+//       }
+//     }
+//   }
+//   .project-info {
+//     .info {
+//
+//     }
+//   }
+//   .read-more {
+//
+//     float: right;
+//   }
+// }

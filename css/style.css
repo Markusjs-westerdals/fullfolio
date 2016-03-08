@@ -1,0 +1,138 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 5, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+/* line 22, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1; }
+
+/* line 24, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none; }
+
+/* line 26, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* line 28, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; }
+
+/* line 30, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none; }
+  /* line 103, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+  q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+    content: none; }
+
+/* line 32, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none; }
+
+/* line 116, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block; }
+
+/* line 3, ../sass/_typography.scss */
+body {
+  font-family: "Lato", sans-serif;
+  color: black; }
+
+/* line 9, ../sass/_typography.scss */
+h1 {
+  font-size: 3em; }
+
+/* line 13, ../sass/_typography.scss */
+a {
+  text-decoration: none;
+  color: inherit;
+  border-bottom: 1px solid;
+  border-bottom-width: 2px; }
+  /* line 18, ../sass/_typography.scss */
+  a:hover {
+    font-weight: 800;
+    border-bottom-width: 5px; }
+
+/* line 24, ../sass/_typography.scss */
+b {
+  font-weight: 700; }
+
+@media only screen and (max-width: 40em) {
+  /* line 147, ../sass/_preview.scss */
+  .site-title {
+    font-size: .5em; } }
+@media only screen and (min-width: 40.063em) {
+  /* line 147, ../sass/_preview.scss */
+  .site-title {
+    font-size: .5em; } }
+
+/* line 215, ../sass/_preview.scss */
+.preview {
+  overflow: hidden;
+  height: 100%;
+  width: 100%; }
+  /* line 221, ../sass/_preview.scss */
+  .preview.img-dubi {
+    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("../img/dubi_home.png");
+    overflow: hidden; }
+    @media only screen and (max-width: 40em) {
+      /* line 227, ../sass/_preview.scss */
+      .preview.img-dubi:before {
+        background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("../img/dubi_home.png"); } }
+
+/* line 58, ../sass/_navigation.scss */
+#fp-nav > ul > li a {
+  border: 0; }
+/* line 61, ../sass/_navigation.scss */
+#fp-nav > ul > li a span {
+  background-color: white; }
+
+/* line 66, ../sass/_navigation.scss */
+.site-title {
+  position: absolute;
+  padding: 20px 20px;
+  top: 0;
+  background-color: black;
+  color: white;
+  z-index: 10; }
+  /* line 74, ../sass/_navigation.scss */
+  .site-title p {
+    font-weight: 200;
+    line-height: 30px; }
+
+/* line 1, ../sass/_folio.scss */
+#right {
+  float: right;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 25px 0 25px 30px;
+  border-color: transparent transparent transparent #333333;
+  line-height: 0px;
+  _border-color: #000000 #000000 #000000 #333333;
+  _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000'); }

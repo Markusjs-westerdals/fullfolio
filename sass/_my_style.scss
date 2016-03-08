@@ -1,0 +1,256 @@
+// Breakpoint mixins
+@mixin bp($point) {
+  // assume that the default is 'small'
+  // usage: @include bp(large) { ... }
+  @if $point == medium { // 641px, 1024px
+    @media only screen and (min-width: 40.063em) { @content; }
+  }
+  @else if $point == large { // 1025px, 1440px
+    @media only screen and (min-width: 64.063em) { @content; }
+  }
+  @else if $point == xlarge { // 1441px, 1920px
+    @media only screen and (min-width: 90.063em) { @content; }
+  }
+  @else if $point == xxlarge { // 1921px and up
+    @media only screen and (min-width: 120.063em)  { @content; }
+  }
+  @else if $point == retina {
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+           only screen and (min--moz-device-pixel-ratio: 1.5),
+           only screen and (min-device-pixel-ratio: 1.5) { @content; }
+  }
+  @else if $point == iphone { // an iPhone 5
+    @media (device-height: 568px) and (-webkit-min-device-pixel-ratio: 2) { @content }
+  }
+}
+html, body {
+  margin: 0;
+
+}
+
+//1. colors
+//2. front page
+//3. default styling for the project overview
+//2. dubi
+
+
+// 1. colors
+$logo-text: rgb(100, 100, 100);
+
+//2. front page
+.title-wrap {
+  color: black;
+  text-align: center;
+  margin-top: -200px;
+  h1, h3 {
+    padding: .2em;
+  }
+  h1 {
+    display: inline-block;
+    font-size: 3em;
+    @include bp(medium) {
+      font-size: 4em;
+    }
+    @include bp(large) {
+      font-size: 7em;
+    }
+  }
+  h3 {
+    color: black;
+    display: inline-block;
+    font-weight: 100;
+    font-size: 2.2em;
+    margin-top: -55px;
+
+    // font-size: 5.1em;
+    @include bp(medium) {
+      font-size: 2.92em;
+    }
+    @include bp(large) {
+      font-size: 5.1em;
+    }
+  }
+  p {
+    margin-top: 2em;
+  }
+}
+.nav-btn {
+  a {
+    font-size: 1em;
+    text-decoration: none;
+    color: white;
+    margin-top: 2em;
+    margin-left: 2em;
+    background-color: $logo-text;
+    padding: 20px;
+    border-radius: 2%;
+    &.about {
+      float: left;
+    }
+    &.work {
+      float: right;
+    }
+  }
+}
+
+// // medium
+// @media only screen and (max-width: 800px) {
+//   .title-wrap {
+//     h1 {
+//       font-size: 300%;
+//       //font-size: 3em;
+//     }
+//     h3 {
+//       font-size: 2.23em;
+//     }
+//   }
+// }
+// large screens
+// @media only screen and (min-width: $large) {
+//   .title-wrap {
+//     h1 {
+//       font-size: 7em;
+//     }
+//     h3 {
+//       font-size: 5.1em;
+//     }
+//   }
+// }
+// // large screens
+// @media only screen and (max-width: $med) {
+//   .title-wrap {
+//     h1 {
+//       font-size: 3em;
+//     }
+//     h3 {
+//       font-size: 2.23em;
+//     }
+//   }
+// }
+
+//@media only screen and (max-width: 48em) {
+//  .title-wrap {
+//    h1 {
+//      font-size: 3em;
+//    }
+//    h3 {
+//      font-size: 5.2em;
+//    }
+//  }
+//}
+
+//3. default styling for the project overview
+.project {
+  height: 100%;
+}
+.project-img {
+
+  background-repeat: no-repeat;
+  &.dubi {
+    background: url("../img/dubi_home_2.jpg");
+    background-size: cover;
+    background-position-x: -10%;
+  }
+  &.kutt {
+    background: url("../img/kutt_home.jpg");
+    background-size: cover;
+    width: 100% !important;
+  }
+}
+// 3.1. sidebar
+// logo at sidebar for project
+.project-side {
+  padding: 0;
+  .side-header {
+    text-align: center;
+    h1 {
+      font-size: 3em;
+      color: $logo-text;
+    }
+    .title {
+      h3 {
+        font-size: 2em;
+        color: $logo-text;
+      }
+      h4 {
+
+      }
+    }
+  }
+}
+
+.side-wrap {
+  margin-top: 10px;
+}
+
+
+.card {
+  box-shadow: none !important;
+  &.description {
+    padding-top: 10px;
+  }
+}
+
+
+//media queries
+@media only screen and (max-width: 1519px) {
+  .project-side {
+    width: 100%;
+  }
+  .project-img {
+    &.dubi, &.kutt {
+      background-position-x: 30%;
+    }
+  }
+}
+
+// small
+@media only screen and (max-width: 767px) {
+  .card {
+    top: -20px;
+  }
+  #gang {
+    display: none;
+  }
+  // .project-img {
+  //   background-size: 200%;
+  //   background-position-x: 400px;
+  //   background-position-y: 30%;
+  //   &.kutt {
+  //     background-position-x: 10%;
+  //     background-position-y: 30%;
+  //   }
+  // }
+
+  .side-header {
+    display: none;
+  }
+  .twelve {
+    height: 70%;
+  }
+  .four {
+    height: 30%;
+  }
+}
+
+
+.square {
+  background-color: red !important;
+  #cv {
+    background-color: red;
+  }
+}
+
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  .item {
+    position: absolute;
+    top: 50%;
+    height: 100vh;
+    width: 100vw;
+  }
+}

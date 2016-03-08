@@ -1,0 +1,25 @@
+{
+  "name": "fullfolio",
+  "version": "1.0.0",
+  "description": "Readme.",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Markusjs/fullfolio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Markusjs/fullfolio/issues"
+  },
+  "homepage": "https://github.com/Markusjs/fullfolio#readme",
+  "dependencies": {
+    "gulp": "^3.9.1"
+  },
+  "devDependencies": {
+    "gulp-jade": "^1.1.0"
+  }
+}

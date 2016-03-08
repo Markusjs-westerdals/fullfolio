@@ -1,0 +1,183 @@
+/* line 1, ../sass/cv.scss */
+.cv {
+  height: 200%;
+  overflow-y: scroll;
+  width: 100%; }
+  /* line 5, ../sass/cv.scss */
+  .cv #wrap {
+    max-width: 60em;
+    margin: 0 auto;
+    overflow-y: scroll; }
+  /* line 12, ../sass/cv.scss */
+  .cv :target {
+    background-color: #fafafa;
+    padding-left: 10px;
+    padding-right: 10px; }
+  /* line 18, ../sass/cv.scss */
+  .cv .title {
+    font-size: 3em;
+    padding: 20px; }
+  /* line 25, ../sass/cv.scss */
+  .cv .elem {
+    padding: 10px;
+    border-left: 1px solid rgba(100, 100, 100, 0.2);
+    padding-left: 10px; }
+    /* line 27, ../sass/cv.scss */
+    .cv .elem .year {
+      font-style: italic;
+      float: right;
+      padding-top: 5px; }
+    /* line 34, ../sass/cv.scss */
+    .cv .elem h3 {
+      padding-left: -20px;
+      padding-top: 5px;
+      color: #646464; }
+    /* line 39, ../sass/cv.scss */
+    .cv .elem b {
+      padding: .5em;
+      display: inline-block;
+      min-width: 50px; }
+  /* line 47, ../sass/cv.scss */
+  .cv .cv-section {
+    padding: 10px; }
+    /* line 49, ../sass/cv.scss */
+    .cv .cv-section:not(:first-of-type) {
+      margin-top: 10px;
+      border-top: 1px dashed #c8c8c8; }
+  @media screen and (max-width: 1082px) {
+    /* line 56, ../sass/cv.scss */
+    .cv #content {
+      margin-bottom: 90px; } }
+
+/* line 70, ../sass/cv.scss */
+.title {
+  margin-top: 10px; }
+
+/* line 74, ../sass/cv.scss */
+img {
+  padding-top: 20px;
+  max-width: 100%;
+  height: auto; }
+
+/* line 79, ../sass/cv.scss */
+#mobile-menu {
+  visibility: hidden; }
+
+/* line 84, ../sass/cv.scss */
+body {
+  margin: 0; }
+
+/* line 88, ../sass/cv.scss */
+#index {
+  position: absolute;
+  left: 0;
+  margin-left: 5%;
+  margin-top: 2em; }
+  /* line 93, ../sass/cv.scss */
+  #index #table-of-content {
+    position: fixed; }
+  /* line 96, ../sass/cv.scss */
+  #index li, #index ol {
+    padding: 10px; }
+
+/* line 101, ../sass/cv.scss */
+#content {
+  margin-left: 30%;
+  position: relative;
+  max-width: 100%; }
+
+@media screen and (max-width: 1082px) {
+  /* line 109, ../sass/cv.scss */
+  #mobile-menu {
+    visibility: visible;
+    border-top: 1px solid black;
+    bottom: 0;
+    z-index: 100;
+    position: fixed;
+    text-align: center;
+    background: white;
+    margin: 0;
+    padding: 20px;
+    width: 100%; }
+    /* line 120, ../sass/cv.scss */
+    #mobile-menu button {
+      margin: 0;
+      margin-right: 40px;
+      border: 0;
+      font-size: 100%;
+      border-bottom: 1px solid black;
+      background: white; }
+
+  /* line 130, ../sass/cv.scss */
+  #index {
+    display: none;
+    margin: 0 auto; }
+    /* line 133, ../sass/cv.scss */
+    #index #table-of-content {
+      padding-bottom: 80px;
+      padding-top: 3%;
+      padding-left: 20%;
+      z-index: 3;
+      background: white;
+      width: 100%;
+      font-size: 110%;
+      /* height: 80%; */
+      bottom: 0; }
+
+  /* line 145, ../sass/cv.scss */
+  #content {
+    margin: 0 auto; } }
+@media screen and (max-width: 771px) {
+  /* line 152, ../sass/cv.scss */
+  #content {
+    margin: 10px;
+    width: 92%; }
+
+  /* line 156, ../sass/cv.scss */
+  .year {
+    width: 100%; } }
+/* line 162, ../sass/cv.scss */
+.menu {
+  display: block;
+  width: 500px;
+  height: 100%;
+  background-color: blue; }
+  /* line 168, ../sass/cv.scss */
+  .menu ul li {
+    display: inline;
+    float: left;
+    list-style: none; }
+
+/* line 176, ../sass/cv.scss */
+img.smaller {
+  height: 50%;
+  width: 50%;
+  margin: 0 auto;
+  display: block; }
+
+/* line 182, ../sass/cv.scss */
+img.small {
+  height: 60%;
+  width: 60%;
+  display: block;
+  margin: 0 auto; }
+
+/* line 189, ../sass/cv.scss */
+.cv-title {
+  margin-top: 10px;
+  text-align: center; }
+  /* line 192, ../sass/cv.scss */
+  .cv-title h3 {
+    margin-right: 255px;
+    letter-spacing: 1.5px; }
+  /* line 196, ../sass/cv.scss */
+  .cv-title h1 {
+    font-size: 2em; }
+  /* line 199, ../sass/cv.scss */
+  .cv-title .menu {
+    margin-left: 50px;
+    font-size: 2em; }
+    /* line 202, ../sass/cv.scss */
+    .cv-title .menu li {
+      border-bottom: 2px solid #646464;
+      padding-bottom: 10px; }

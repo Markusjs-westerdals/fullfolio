@@ -1,0 +1,10 @@
+/* line 3, ../sass/typography.scss */
+body {
+  font-family: Lato;
+  color: black;
+}
+/* line 6, ../sass/typography.scss */
+body a {
+  text-decoration: none;
+  color: inherit;
+}

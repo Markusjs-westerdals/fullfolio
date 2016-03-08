@@ -1,0 +1,78 @@
+// .nav {
+//   font-weight: 100;
+//   font-size: 2.4em;
+//   display: inline-block;
+//
+//   @include transform( scale(-1 1));
+//   div {
+//     p {
+//       display: inline;
+//     }
+//     position: absolute;
+//     top: 70%;
+//     width: 56%;
+//     text-align: center;
+//   }
+//   .to-cv {
+//     float: left;
+//     left: 33%;
+//     margin-bottom: 300px;
+//     width: 200px;
+//     @include bp(large) {
+//       left: 40%;
+//     }
+//     @include bp(medium) {
+//       left: 43%;
+//     }
+//   }
+//   .to-about {
+//     width: 200px;
+//     right: 33%;
+//     @include bp(large) {
+//       right: 40%;
+//     }
+//     @include bp(medium) {
+//       right: 43%;
+//     }
+//   }
+//   .to-folio {
+//     top: 80%;
+//     width: 100%;
+//     left: 0%;
+//     margin: 0 auto;
+//     text-align: center;
+//   }
+//   i {
+//     background-color: white;
+//     font-size: .95em;
+//     margin: .4em;
+//     &.down {
+//       margin: 0 auto;
+//       margin-top: 10px;
+//       margin-right: 0px;
+//     }
+//   }
+// }
+
+#fp-nav > ul > li {
+  a {
+    border: 0;
+  }
+  a span {
+    background-color: white;
+  }
+}
+
+.site-title {
+  position: absolute;
+  // padding: 20px;
+  padding: 20px 20px;
+  top: 0;
+  background-color: black;
+  color: white;
+  z-index: 10;
+  p {
+    font-weight: 200;
+    line-height: 30px;
+  }
+}
