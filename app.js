@@ -28,4 +28,5 @@ $(document).ready(function() {
     $('.to-cv').on("click", function() {
       $.fn.fullpage.moveTo(1, 0);
     })
+    // $("#cv").slimScroll({destroy: true});
 });

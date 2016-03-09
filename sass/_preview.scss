@@ -145,6 +145,7 @@
 // }
 
 .site-title {
+  width: 100%;
   @include bp(small) {
     font-size: .5em;
   }
@@ -161,152 +162,204 @@
 
 }
 @mixin pj-info {
-  position: absolute;
+  width: 100%;
   text-align: center;
-  width: 90%;
-  font-size: 1.5em;
+  position: absolute;
+  margin: 0 auto;
+  text-align: center;
+  padding: 10px;
+  font-size: 10%;
   font-weight: 400;
   letter-spacing: 3px;
   line-height: 60px;
-  left: 2.5%;
+  a {
+    font-weight: 700;
+  }
   @include bp(small) {
-    font-size: 1.5em;
+    font-size: 1.3em;
     line-height: 150%;
   }
   @include bp(medium) {
-    font-size: 3em;
+    font-size: 2.5em;
+    line-height: 150%;
   }
 }
-@mixin bg-img-all {
-    content: "";
-    position: absolute;
-    width: 200%;
-    height: 200%;
-    top: -50%;
-    left: -50%;
-    z-index: -1;
-
-    @include bp(medium) {
-      background:     linear-gradient(
-        rgba(0, 0, 0, 0.15),
-        rgba(0, 0, 0, 0.15)
-      ), url("../img/kutt_front_small.png");
-      background-size: 85%;
-      background-position-x: 100px;
-      background-position-y: 250px;
-      background-repeat: no-repeat;
-    }
-    @include bp(large) {
-      background:     linear-gradient(
-        rgba(0, 0, 0, 0.15),
-        rgba(0, 0, 0, 0.15)
-      ), url("../img/kutt_front_big.png");
-      background-size: 50%;
-      background-position: center;
-      -webkit-transform: rotate(30deg);
-      -moz-transform: rotate(30deg);
-      -ms-transform: rotate(30deg);
-      -o-transform: rotate(30deg);
-      transform: rotate(30deg);
-    }
-
-
+@mixin before {
+  overflow: hidden;
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  height: 200%;
+  width: 199%;
 }
 .preview {
+  color: white;
+  font-size: 1em;
   overflow: hidden;
   // color: white;
   height: 100%;
   width: 100%;
     &.img {
       &-dubi {
-        background:     linear-gradient(
-          rgba(0, 0, 0, 0.45),
-          rgba(0, 0, 0, 0.45)
-        ), url("../img/dubi_home.png");
+        position: relative;
         overflow: hidden;
         &:before {
-          //@include bg-img-all;
+          @include before;
           @include bp(small) {
             background:     linear-gradient(
               rgba(0, 0, 0, 0.45),
               rgba(0, 0, 0, 0.45)
-            ), url("../img/dubi_home.png");
-            // background-size: 100%;
-            // background-position-x: -300px;
-            // background-position-y: 150px;
-            // background-repeat: no-repeat;
+            ), url("../img/dubi-ipad-copy.png");
+            background-size: 200%;
+            background-position-x: -200px;
+            background-position-y: 250px;
+            transform: rotate(20deg);
+          }
+          @include bp(medium) {
+            background:     linear-gradient(
+              rgba(0, 0, 0, 0.45),
+              rgba(0, 0, 0, 0.45)
+            ), url("../img/dubi-ipad-copy.png");
+            background-size: cover;
+            background-position-x: -1000px;
+            background-position-y: 200px;
+          }
+          @include bp(large) {
+            background:     linear-gradient(
+              rgba(0, 0, 0, 0.45),
+              rgba(0, 0, 0, 0.45)
+            ), url("../img/dubi-ipad-copy.png");
+            background-size: cover;
+            background-position-y: 200px;
+          }
+        }
+        .project-info {
+          @include pj-info;
+          top: 15%;
+          left: 0;
+          @include bp(small) {
+            text-align: left;
+            padding-left: 10%;
+            width: 90%;
+            a {
+              line-height: 70px;
+            }
+
+          }
+          @include bp(medium) {
+            width: 98%;
+            a {
+              line-height: 100px;
+            }
+          }
+          @include bp(large) {
+
+
+          }
+        }
+      }
+      &-kutt {
+        position: relative;
+        overflow: hidden;
+        &:before {
+          @include before;
+          @include bp(small) {
+            background:     linear-gradient(
+              rgba(0, 0, 0, 0.15),
+              rgba(0, 0, 0, 0.15)
+            ), url("../img/kutt_front_small.png");
+            background-size: 100%;
+            background-position-x: -100px;
+            background-position-y: 250px;
+            background-repeat: no-repeat;
+
+          }
+          @include bp(medium) {
+            background:     linear-gradient(
+              rgba(0, 0, 0, 0.15),
+              rgba(0, 0, 0, 0.15)
+            ), url("../img/kutt_front_small.png");
+            background-size: 100%;
+            background-position-x: -100px;
+            background-position-y: 250px;
+            background-repeat: no-repeat;
+          }
+        }
+        .project-info {
+          @include pj-info;
+          top: 15%;
+          a {
+            line-height: 70px;
+          }
+          @include bp(small) {
+            text-align: left;
+            left: 10%;
+          }
+          @include bp(medium) {
+            text-align: left;
+            left: 10%;
+            a {
+              line-height: 100px;
+            }
+            @include bp(large) {
+              left: 0;
+              text-align: center;
+            }
+          }
+        }
+      }
+      &-grafisk {
+        position: relative;
+        overflow: hidden;
+        &:before {
+          @include before;
+          @include bp(small) {
+            background:     linear-gradient(
+              rgba(0, 0, 0, 0),
+              rgba(0, 0, 0, 0)
+            ), url("../img/stripy_vert_striped.png");
+            background-size: 75%;
+            background-position: center;
+
+            background-repeat: no-repeat;
+          }
+          @include bp(medium) {
+            background:     linear-gradient(
+              rgba(0, 0, 0, 0),
+              rgba(0, 0, 0, 0)
+            ), url("../img/stripy_vert_striped.png");
+            background-size: 80%;
+            background-position: center;
+            background-repeat: no-repeat;
+          }
+          @include bp(large) {
+            background:     linear-gradient(
+              rgba(0, 0, 0, 0),
+              rgba(0, 0, 0, 0)
+            ), url("../img/stripy_vert_striped.png");
+            background-size: 30%;
+            background-position: center;
+            background-repeat: no-repeat;
+          }
+        }
+        .project-info {
+          @include pj-info;
+          color: black;
+          right: 1px;
+          top: 47%;
+          a {
+            line-height: 50px;
+          }
+          @include bp(small) {
+            top: 43%;
+
+          }
+          @include bp(medium) {
+            top: 43%;
+
           }
         }
       }
     }
-}
-//
-//   &.img {
-//     &-dubi {
-//       overflow: hidden;
-//       &:before {
-//         //@include bg-img-all;
-//         @include bp(small) {
-//           background:     linear-gradient(
-//             rgba(0, 0, 0, 0.45),
-//             rgba(0, 0, 0, 0.45)
-//           ), url("../img/dubi-ipad-copy.png");
-//           background-size: 100%;
-//           background-position-x: -300px;
-//           background-position-y: 150px;
-//           background-repeat: no-repeat;
-//
-//         }
-//       }
-//       .project-info {
-//         @include pj-info;
-//         top: 20%;
-//         @include bp(small) {
-//           // font-size: 1em;
-//         }
-//         @include bp(medium) {
-//           // font-size: 3em;
-//           left: 0%;
-//           width: 70%;
-//         }
-//       }
-//     }
-//     &-kutt {
-//       &:before {
-//         //@include bg-img-all;
-//         @include bp(small) {
-//           background:     linear-gradient(
-//             rgba(0, 0, 0, 0.15),
-//             rgba(0, 0, 0, 0.15)
-//           ), url("../img/kutt_front_small.png");
-//           background-size: 85%;
-//           background-position-x: 100px;
-//           background-position-y: 250px;
-//           background-repeat: no-repeat;
-//
-//         }
-//       }
-//       .project-info {
-//         @include pj-info;
-//         top: 20%;
-//         @include bp(small) {
-//           // font-size: 1em;
-//         }
-//         @include bp(medium) {
-//           // font-size: 3em;
-//           left: 0%;
-//           width: 70%;
-//         }
-//       }
-//     }
-//   }
-//   .project-info {
-//     .info {
-//
-//     }
-//   }
-//   .read-more {
-//
-//     float: right;
-//   }
-// }
+  }

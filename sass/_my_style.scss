@@ -1,32 +1,4 @@
-// Breakpoint mixins
-@mixin bp($point) {
-  // assume that the default is 'small'
-  // usage: @include bp(large) { ... }
-  @if $point == medium { // 641px, 1024px
-    @media only screen and (min-width: 40.063em) { @content; }
-  }
-  @else if $point == large { // 1025px, 1440px
-    @media only screen and (min-width: 64.063em) { @content; }
-  }
-  @else if $point == xlarge { // 1441px, 1920px
-    @media only screen and (min-width: 90.063em) { @content; }
-  }
-  @else if $point == xxlarge { // 1921px and up
-    @media only screen and (min-width: 120.063em)  { @content; }
-  }
-  @else if $point == retina {
-    @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-           only screen and (min--moz-device-pixel-ratio: 1.5),
-           only screen and (min-device-pixel-ratio: 1.5) { @content; }
-  }
-  @else if $point == iphone { // an iPhone 5
-    @media (device-height: 568px) and (-webkit-min-device-pixel-ratio: 2) { @content }
-  }
-}
-html, body {
-  margin: 0;
 
-}
 
 //1. colors
 //2. front page
@@ -37,43 +9,7 @@ html, body {
 // 1. colors
 $logo-text: rgb(100, 100, 100);
 
-//2. front page
-.title-wrap {
-  color: black;
-  text-align: center;
-  margin-top: -200px;
-  h1, h3 {
-    padding: .2em;
-  }
-  h1 {
-    display: inline-block;
-    font-size: 3em;
-    @include bp(medium) {
-      font-size: 4em;
-    }
-    @include bp(large) {
-      font-size: 7em;
-    }
-  }
-  h3 {
-    color: black;
-    display: inline-block;
-    font-weight: 100;
-    font-size: 2.2em;
-    margin-top: -55px;
 
-    // font-size: 5.1em;
-    @include bp(medium) {
-      font-size: 2.92em;
-    }
-    @include bp(large) {
-      font-size: 5.1em;
-    }
-  }
-  p {
-    margin-top: 2em;
-  }
-}
 .nav-btn {
   a {
     font-size: 1em;

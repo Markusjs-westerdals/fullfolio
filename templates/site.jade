@@ -1,7 +1,8 @@
 #fullpage
   .section
     .slide
-      include cv.html
+      .cv
+        include cv.html
     .slide.active
       .title-wrap
         .name
@@ -10,23 +11,22 @@
           h3 Interaksjonsdesigner  
           //- p Jeg ønsker å lage digitale produkter som hjelper folk    
       .nav
-        .to-folio
-          a(href="#")
-            p Prosjekter
-            br
-          i.ion-ios-arrow-down.arrow.down
         .to-cv
           a(href="#")
             i.ion-ios-arrow-thin-left
             p CV
         .to-about
           a(href="#")
-            p OM
             i.ion-ios-arrow-thin-right
+            p OM
+        .to-folio
+          a(href="#")
+            p Prosjekter
+            i.ion-ios-arrow-down.arrow.down
     .slide 
       include about
     
-  .section.folio.active
+  .section.folio
     include dubi
   .section.folio
     include kutt

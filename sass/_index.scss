@@ -1,0 +1,73 @@
+//2. front page
+.title-wrap {
+  text-align: center;
+  margin-top: -200px;
+  h1, h3 {
+    padding: .2em;
+  }
+  h1 {
+    display: inline-block;
+    font-size: 3em;
+    @include bp(medium) {
+      font-size: 4em;
+    }
+    @include bp(large) {
+      font-size: 7em;
+    }
+  }
+  h3 {
+    color: black;
+    display: inline-block;
+    font-weight: 100;
+    font-size: 2.2em;
+    margin-top: -55px;
+
+    // font-size: 5.1em;
+    @include bp(medium) {
+      font-size: 2.92em;
+    }
+    @include bp(large) {
+      font-size: 5.1em;
+    }
+  }
+}
+.nav {
+  margin: 10%;
+  font-size: 2em;
+  text-decoration: none;
+  margin-top: 10%;
+  .to-cv {
+    float: left;
+    width: 4em;
+    i {
+      float: left;
+    }
+  }
+  .to-folio {
+    margin: 0 auto;
+    width: 100%;
+    position: absolute;
+    left: 1px;
+    bottom: 10%;
+    i {
+      width: 100%;
+      float: left;
+      margin: 0 auto;
+
+
+    }
+  }
+  .to-about {
+    float: right;
+    width: 4em;
+    i {
+      float: right;
+    }
+  }
+  a {
+    text-align: center;
+    p {
+
+    }
+  }
+}

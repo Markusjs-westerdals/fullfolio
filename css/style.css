@@ -58,6 +58,77 @@ a img {
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block; }
 
+/* line 2, ../sass/_index.scss */
+.title-wrap {
+  text-align: center;
+  margin-top: -200px; }
+  /* line 5, ../sass/_index.scss */
+  .title-wrap h1, .title-wrap h3 {
+    padding: .2em; }
+  /* line 8, ../sass/_index.scss */
+  .title-wrap h1 {
+    display: inline-block;
+    font-size: 3em; }
+    @media only screen and (min-width: 40.063em) {
+      /* line 8, ../sass/_index.scss */
+      .title-wrap h1 {
+        font-size: 4em; } }
+    @media only screen and (min-width: 64.063em) {
+      /* line 8, ../sass/_index.scss */
+      .title-wrap h1 {
+        font-size: 7em; } }
+  /* line 18, ../sass/_index.scss */
+  .title-wrap h3 {
+    color: black;
+    display: inline-block;
+    font-weight: 100;
+    font-size: 2.2em;
+    margin-top: -55px; }
+    @media only screen and (min-width: 40.063em) {
+      /* line 18, ../sass/_index.scss */
+      .title-wrap h3 {
+        font-size: 2.92em; } }
+    @media only screen and (min-width: 64.063em) {
+      /* line 18, ../sass/_index.scss */
+      .title-wrap h3 {
+        font-size: 5.1em; } }
+
+/* line 34, ../sass/_index.scss */
+.nav {
+  margin: 10%;
+  font-size: 2em;
+  text-decoration: none;
+  margin-top: 10%; }
+  /* line 39, ../sass/_index.scss */
+  .nav .to-cv {
+    float: left;
+    width: 4em; }
+    /* line 42, ../sass/_index.scss */
+    .nav .to-cv i {
+      float: left; }
+  /* line 46, ../sass/_index.scss */
+  .nav .to-folio {
+    margin: 0 auto;
+    width: 100%;
+    position: absolute;
+    left: 1px;
+    bottom: 10%; }
+    /* line 52, ../sass/_index.scss */
+    .nav .to-folio i {
+      width: 100%;
+      float: left;
+      margin: 0 auto; }
+  /* line 60, ../sass/_index.scss */
+  .nav .to-about {
+    float: right;
+    width: 4em; }
+    /* line 63, ../sass/_index.scss */
+    .nav .to-about i {
+      float: right; }
+  /* line 67, ../sass/_index.scss */
+  .nav a {
+    text-align: center; }
+
 /* line 3, ../sass/_typography.scss */
 body {
   font-family: "Lato", sans-serif;
@@ -82,28 +153,252 @@ a {
 b {
   font-weight: 700; }
 
-@media only screen and (max-width: 40em) {
-  /* line 147, ../sass/_preview.scss */
-  .site-title {
-    font-size: .5em; } }
-@media only screen and (min-width: 40.063em) {
-  /* line 147, ../sass/_preview.scss */
-  .site-title {
-    font-size: .5em; } }
+/* line 147, ../sass/_preview.scss */
+.site-title {
+  width: 100%; }
+  @media only screen and (max-width: 40em) {
+    /* line 147, ../sass/_preview.scss */
+    .site-title {
+      font-size: .5em; } }
+  @media only screen and (min-width: 40.063em) {
+    /* line 147, ../sass/_preview.scss */
+    .site-title {
+      font-size: .5em; } }
 
-/* line 215, ../sass/_preview.scss */
+/* line 196, ../sass/_preview.scss */
 .preview {
+  color: white;
+  font-size: 1em;
   overflow: hidden;
   height: 100%;
   width: 100%; }
-  /* line 221, ../sass/_preview.scss */
+  /* line 204, ../sass/_preview.scss */
   .preview.img-dubi {
-    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("../img/dubi_home.png");
+    position: relative;
     overflow: hidden; }
-    @media only screen and (max-width: 40em) {
-      /* line 227, ../sass/_preview.scss */
-      .preview.img-dubi:before {
-        background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("../img/dubi_home.png"); } }
+    /* line 207, ../sass/_preview.scss */
+    .preview.img-dubi:before {
+      overflow: hidden;
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      height: 200%;
+      width: 199%; }
+      @media only screen and (max-width: 40em) {
+        /* line 207, ../sass/_preview.scss */
+        .preview.img-dubi:before {
+          background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("../img/dubi-ipad-copy.png");
+          background-size: 200%;
+          background-position-x: -200px;
+          background-position-y: 250px;
+          transform: rotate(20deg); } }
+      @media only screen and (min-width: 40.063em) {
+        /* line 207, ../sass/_preview.scss */
+        .preview.img-dubi:before {
+          background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("../img/dubi-ipad-copy.png");
+          background-size: cover;
+          background-position-x: -1000px;
+          background-position-y: 200px; } }
+      @media only screen and (min-width: 64.063em) {
+        /* line 207, ../sass/_preview.scss */
+        .preview.img-dubi:before {
+          background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("../img/dubi-ipad-copy.png");
+          background-size: cover;
+          background-position-y: 200px; } }
+    /* line 237, ../sass/_preview.scss */
+    .preview.img-dubi .project-info {
+      width: 100%;
+      text-align: center;
+      position: absolute;
+      margin: 0 auto;
+      text-align: center;
+      padding: 10px;
+      font-size: 10%;
+      font-weight: 400;
+      letter-spacing: 3px;
+      line-height: 60px;
+      top: 15%;
+      left: 0; }
+      /* line 175, ../sass/_preview.scss */
+      .preview.img-dubi .project-info a {
+        font-weight: 700; }
+      @media only screen and (max-width: 40em) {
+        /* line 237, ../sass/_preview.scss */
+        .preview.img-dubi .project-info {
+          font-size: 1.3em;
+          line-height: 150%; } }
+      @media only screen and (min-width: 40.063em) {
+        /* line 237, ../sass/_preview.scss */
+        .preview.img-dubi .project-info {
+          font-size: 2.5em;
+          line-height: 150%; } }
+      @media only screen and (max-width: 40em) {
+        /* line 237, ../sass/_preview.scss */
+        .preview.img-dubi .project-info {
+          text-align: left;
+          padding-left: 10%;
+          width: 90%; }
+          /* line 245, ../sass/_preview.scss */
+          .preview.img-dubi .project-info a {
+            line-height: 70px; } }
+      @media only screen and (min-width: 40.063em) {
+        /* line 237, ../sass/_preview.scss */
+        .preview.img-dubi .project-info {
+          width: 98%; }
+          /* line 252, ../sass/_preview.scss */
+          .preview.img-dubi .project-info a {
+            line-height: 100px; } }
+  /* line 262, ../sass/_preview.scss */
+  .preview.img-kutt {
+    position: relative;
+    overflow: hidden; }
+    /* line 265, ../sass/_preview.scss */
+    .preview.img-kutt:before {
+      overflow: hidden;
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      height: 200%;
+      width: 199%; }
+      @media only screen and (max-width: 40em) {
+        /* line 265, ../sass/_preview.scss */
+        .preview.img-kutt:before {
+          background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url("../img/kutt_front_small.png");
+          background-size: 100%;
+          background-position-x: -100px;
+          background-position-y: 250px;
+          background-repeat: no-repeat; } }
+      @media only screen and (min-width: 40.063em) {
+        /* line 265, ../sass/_preview.scss */
+        .preview.img-kutt:before {
+          background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url("../img/kutt_front_small.png");
+          background-size: 100%;
+          background-position-x: -100px;
+          background-position-y: 250px;
+          background-repeat: no-repeat; } }
+    /* line 289, ../sass/_preview.scss */
+    .preview.img-kutt .project-info {
+      width: 100%;
+      text-align: center;
+      position: absolute;
+      margin: 0 auto;
+      text-align: center;
+      padding: 10px;
+      font-size: 10%;
+      font-weight: 400;
+      letter-spacing: 3px;
+      line-height: 60px;
+      top: 15%; }
+      /* line 175, ../sass/_preview.scss */
+      .preview.img-kutt .project-info a {
+        font-weight: 700; }
+      @media only screen and (max-width: 40em) {
+        /* line 289, ../sass/_preview.scss */
+        .preview.img-kutt .project-info {
+          font-size: 1.3em;
+          line-height: 150%; } }
+      @media only screen and (min-width: 40.063em) {
+        /* line 289, ../sass/_preview.scss */
+        .preview.img-kutt .project-info {
+          font-size: 2.5em;
+          line-height: 150%; } }
+      /* line 292, ../sass/_preview.scss */
+      .preview.img-kutt .project-info a {
+        line-height: 70px; }
+      @media only screen and (max-width: 40em) {
+        /* line 289, ../sass/_preview.scss */
+        .preview.img-kutt .project-info {
+          text-align: left;
+          left: 10%; } }
+      @media only screen and (min-width: 40.063em) {
+        /* line 289, ../sass/_preview.scss */
+        .preview.img-kutt .project-info {
+          text-align: left;
+          left: 10%; }
+          /* line 302, ../sass/_preview.scss */
+          .preview.img-kutt .project-info a {
+            line-height: 100px; } }
+  @media only screen and (min-width: 40.063em) and (min-width: 64.063em) {
+    /* line 289, ../sass/_preview.scss */
+    .preview.img-kutt .project-info {
+      left: 0;
+      text-align: center; } }
+
+  /* line 312, ../sass/_preview.scss */
+  .preview.img-grafisk {
+    position: relative;
+    overflow: hidden; }
+    /* line 315, ../sass/_preview.scss */
+    .preview.img-grafisk:before {
+      overflow: hidden;
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      height: 200%;
+      width: 199%; }
+      @media only screen and (max-width: 40em) {
+        /* line 315, ../sass/_preview.scss */
+        .preview.img-grafisk:before {
+          background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../img/stripy_vert_striped.png");
+          background-size: 75%;
+          background-position: center;
+          background-repeat: no-repeat; } }
+      @media only screen and (min-width: 40.063em) {
+        /* line 315, ../sass/_preview.scss */
+        .preview.img-grafisk:before {
+          background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../img/stripy_vert_striped.png");
+          background-size: 80%;
+          background-position: center;
+          background-repeat: no-repeat; } }
+      @media only screen and (min-width: 64.063em) {
+        /* line 315, ../sass/_preview.scss */
+        .preview.img-grafisk:before {
+          background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../img/stripy_vert_striped.png");
+          background-size: 30%;
+          background-position: center;
+          background-repeat: no-repeat; } }
+    /* line 346, ../sass/_preview.scss */
+    .preview.img-grafisk .project-info {
+      width: 100%;
+      text-align: center;
+      position: absolute;
+      margin: 0 auto;
+      text-align: center;
+      padding: 10px;
+      font-size: 10%;
+      font-weight: 400;
+      letter-spacing: 3px;
+      line-height: 60px;
+      color: black;
+      right: 1px;
+      top: 47%; }
+      /* line 175, ../sass/_preview.scss */
+      .preview.img-grafisk .project-info a {
+        font-weight: 700; }
+      @media only screen and (max-width: 40em) {
+        /* line 346, ../sass/_preview.scss */
+        .preview.img-grafisk .project-info {
+          font-size: 1.3em;
+          line-height: 150%; } }
+      @media only screen and (min-width: 40.063em) {
+        /* line 346, ../sass/_preview.scss */
+        .preview.img-grafisk .project-info {
+          font-size: 2.5em;
+          line-height: 150%; } }
+      /* line 351, ../sass/_preview.scss */
+      .preview.img-grafisk .project-info a {
+        line-height: 50px; }
+      @media only screen and (max-width: 40em) {
+        /* line 346, ../sass/_preview.scss */
+        .preview.img-grafisk .project-info {
+          top: 43%; } }
+      @media only screen and (min-width: 40.063em) {
+        /* line 346, ../sass/_preview.scss */
+        .preview.img-grafisk .project-info {
+          top: 43%; } }
 
 /* line 58, ../sass/_navigation.scss */
 #fp-nav > ul > li a {
@@ -124,15 +419,3 @@ b {
   .site-title p {
     font-weight: 200;
     line-height: 30px; }
-
-/* line 1, ../sass/_folio.scss */
-#right {
-  float: right;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 25px 0 25px 30px;
-  border-color: transparent transparent transparent #333333;
-  line-height: 0px;
-  _border-color: #000000 #000000 #000000 #333333;
-  _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000'); }
