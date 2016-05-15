@@ -1,0 +1,52 @@
+//.loading
+  p Loading...
+#fullpage
+  .section
+    .slide
+      .cv
+        include cv.html
+    .slide.active
+      .title-wrap
+        .name
+          h1 Markus Sørem
+        .title
+          h3 Interaksjonsdesigner
+          //- p Jeg ønsker å lage digitale produkter som hjelper folk
+      .nav
+        //.to-cv
+          a(href="#")
+            i.ion-ios-arrow-thin-left
+            p CV
+        //.to-about
+          a(href="#")
+            i.ion-ios-arrow-thin-right
+            p OM
+        .to-folio
+          a(href="#")
+            p Prosjekter
+            p ↓
+            //i.ion-ios-arrow-down.down
+    .slide
+      include about
+
+  .section.folio
+    include dubi
+  //.section.folio
+    include kutt
+  //.section.folio
+    include grafisk
+
+    //- .prev-name.kutt
+    //-   p.small En
+    //-     span.bold app
+    //-     | som hjelper deg å spise sunt.
+    //- .preview
+    //-   .img-kutt
+
+
+//-   <div class="section">
+//-     <div class="slide"> Slide 1 </div>
+//-     <div class="slide"> Slide 2 </div>
+//-     <div class="slide"> Slide 3 </div>
+//-     <div class="slide"> Slide 4 </div>
+//- </div>

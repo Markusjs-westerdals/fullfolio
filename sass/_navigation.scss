@@ -1,58 +1,70 @@
-// .nav {
-//   font-weight: 100;
-//   font-size: 2.4em;
-//   display: inline-block;
-//
-//   @include transform( scale(-1 1));
-//   div {
-//     p {
-//       display: inline;
-//     }
-//     position: absolute;
-//     top: 70%;
-//     width: 56%;
-//     text-align: center;
-//   }
-//   .to-cv {
-//     float: left;
-//     left: 33%;
-//     margin-bottom: 300px;
-//     width: 200px;
-//     @include bp(large) {
-//       left: 40%;
-//     }
-//     @include bp(medium) {
-//       left: 43%;
-//     }
-//   }
-//   .to-about {
-//     width: 200px;
-//     right: 33%;
-//     @include bp(large) {
-//       right: 40%;
-//     }
-//     @include bp(medium) {
-//       right: 43%;
-//     }
-//   }
-//   .to-folio {
-//     top: 80%;
-//     width: 100%;
-//     left: 0%;
-//     margin: 0 auto;
-//     text-align: center;
-//   }
-//   i {
-//     background-color: white;
-//     font-size: .95em;
-//     margin: .4em;
-//     &.down {
-//       margin: 0 auto;
-//       margin-top: 10px;
-//       margin-right: 0px;
-//     }
-//   }
+.navigation {
+  position: absolute;
+  width: 100vw;
+  z-index: 100;
+  padding: 10px;
+  top: 0;
+  a {
+    &.left {
+      float: left;
+    }
+    &.right {
+      float: right;
+    }
+    font-size: 2em;
+    color: white;
+    margin-right: 20px;
+  }
+}
+i {
+  padding: 5px;
+}
+.arrow {
+  top: 0;
+}
+// .arrow-right {
+//   color: white;
+//   font-size: 3em;
+//   top: 0;
+//   z-index: 1000;
 // }
+// .arrow {
+//   color: white;
+//   cursor: pointer;
+//   position: absolute;
+//   font-size: 3em;
+//   top: 2px;
+//   &-right {
+//     // margin-right: 1.2em;
+//     // position: absolute;
+//
+//     // left: 40%;
+//     // top: 10px;
+//     // left: 40%;
+//     right: 0;
+//   }
+  // i {
+  //   float: right;
+  //   display: inline;
+  //   font-size: 3em;
+  //   position: fixed;
+  // }
+.cv-arrow {
+    position: absolute;
+    float: right;
+    right: 0;
+    i {
+      position: relative;
+    }
+    // cursor: pointer;
+    // position: absolute;
+    // float: right;
+    // right: 0;
+    // top: 30px;
+    // font-size: 3em;
+    // margin-right: 1em;
+
+}
 
 #fp-nav > ul > li {
   a {
@@ -63,16 +75,19 @@
   }
 }
 
-.site-title {
-  position: absolute;
-  // padding: 20px;
-  padding: 20px 20px;
-  top: 0;
-  background-color: black;
-  color: white;
-  z-index: 10;
-  p {
-    font-weight: 200;
-    line-height: 30px;
-  }
-}
+// .site-title {
+//   width: 100%;
+//
+//   position: absolute;
+//   // padding: 20px;
+//   padding: 20px 20px;
+//   bottom: 0;
+//   background-color: black;
+//   color: white;
+//   z-index: 10;
+//   font-size: .8em;
+// }
+//
+// .fp-viewing-kjottkutt-0 .site-title {
+//   bottom: 100px;
+// }

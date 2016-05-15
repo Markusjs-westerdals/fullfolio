@@ -1,118 +1,136 @@
-/* line 2, ../sass/cv.scss */
+.slimScrollBar {
+  visibility: hidden; }
+
 .cv {
+  z-index: 1000;
+  background-color: white;
   height: 100%;
   -webkit-overflow-scrolling: touch;
   overflow-y: scroll;
   width: 100%; }
-  /* line 7, ../sass/cv.scss */
-  .cv #wrap {
-    max-width: 50em;
-    margin: 0 auto; }
-    /* line 14, ../sass/cv.scss */
-    .cv #wrap :target {
-      background-color: #e6e6e6;
-      padding-left: 10px;
-      padding-right: 10px; }
-  /* line 21, ../sass/cv.scss */
-  .cv .title {
-    font-size: 3em;
-    padding: 20px; }
-  /* line 28, ../sass/cv.scss */
-  .cv .elem {
-    padding: 10px;
-    margin-top: 1em;
-    line-height: 20px;
-    border-left: 1px solid rgba(100, 100, 100, 0.2);
-    padding-left: 10px; }
-    /* line 32, ../sass/cv.scss */
-    .cv .elem .year {
-      font-style: italic;
-      float: right;
-      padding-top: 5px;
-      padding-bottom: 10px; }
-      /* line 37, ../sass/cv.scss */
-      .cv .elem .year span {
-        margin: 10px 0;
-        display: block; }
-    /* line 44, ../sass/cv.scss */
-    .cv .elem h3 {
-      line-height: 30px;
-      font-size: 1.5em;
-      padding-left: -20px;
-      padding-top: 5px;
-      color: #646464; }
-    /* line 51, ../sass/cv.scss */
-    .cv .elem b {
-      padding: .5em;
-      display: inline-block;
-      min-width: 50px; }
-    /* line 57, ../sass/cv.scss */
-    .cv .elem .explanation {
-      display: inline-block;
-      width: 70%; }
-    /* line 62, ../sass/cv.scss */
-    .cv .elem ul {
-      background: red;
-      display: inline-block;
-      width: 50%; }
-  /* line 72, ../sass/cv.scss */
-  .cv .cv-section {
-    padding: 10px; }
-    /* line 74, ../sass/cv.scss */
-    .cv .cv-section:not(:first-of-type) {
-      margin-top: 10px;
-      border-top: 1px dashed #c8c8c8; }
-  @media screen and (max-width: 1082px) {
-    /* line 81, ../sass/cv.scss */
-    .cv #content {
-      margin-bottom: 90px; } }
 
-/* line 95, ../sass/cv.scss */
+.cv .navigation a {
+  color: black; }
+
+#wrap {
+  max-width: 50em;
+  margin: 0 auto;
+  margin-top: 50px;
+  overflow-y: scroll; }
+
+#wrap :target {
+  background-color: #e6e6e6;
+  padding-left: 10px;
+  padding-right: 10px; }
+
+#title {
+  text-align: center; }
+
+#name {
+  text-align: center;
+  letter-spacing: 1.5px;
+  margin-left: 3px;
+  border-bottom: 1px solid rgba(100, 100, 100, 0.2);
+  padding-bottom: 20px;
+  display: inline-block;
+  background-color: blue;
+  width: 30%;
+  margin: 0 auto; }
+
+#name i {
+  float: right;
+  font-size: 4em;
+  display: inline;
+  background-color: red; }
+
 .title {
-  margin-top: 10px; }
+  padding: 20px; }
 
-/* line 99, ../sass/cv.scss */
+.title i {
+  display: inline-block; }
+
+.elem {
+  padding: 10px;
+  margin-top: 1em;
+  line-height: 20px;
+  border-left: 1px solid rgba(100, 100, 100, 0.2);
+  padding-left: 10px; }
+
+.elem .year {
+  font-style: italic;
+  float: right;
+  padding-top: 5px;
+  padding-bottom: 10px; }
+
+.elem .year span {
+  margin: 10px 0;
+  display: block; }
+
+.elem h3 {
+  line-height: 30px;
+  font-size: 1.5em;
+  padding-left: -20px;
+  padding-top: 5px;
+  color: #646464; }
+
+.elem b {
+  padding: .5em;
+  display: inline-block;
+  min-width: 50px; }
+
+.elem .explanation {
+  display: inline-block;
+  width: 70%; }
+
+.elem ul {
+  background: red;
+  display: inline-block;
+  width: 50%; }
+
+.cv-section {
+  padding: 10px; }
+
+.cv-section:not(:first-of-type) {
+  margin-top: 10px;
+  border-top: 1px dashed #c8c8c8; }
+
+@media screen and (max-width: 1082px) {
+  #content {
+    margin-bottom: 90px; } }
+
 img {
   padding-top: 20px;
   max-width: 100%;
   height: auto; }
 
-/* line 104, ../sass/cv.scss */
-#mobile-menu {
-  visibility: hidden; }
-
-/* line 110, ../sass/cv.scss */
 body {
   margin: 0; }
 
-/* line 114, ../sass/cv.scss */
 #index {
   position: absolute;
   left: 0;
   margin-left: 5%;
   margin-top: 2em; }
-  /* line 119, ../sass/cv.scss */
-  #index #table-of-content {
-    position: fixed;
-    -webkit-overflow-scrolling: touch;
-    overflow-y: scroll;
-    height: 80%; }
-  /* line 125, ../sass/cv.scss */
-  #index li, #index ol {
-    padding: 7px; }
 
-/* line 130, ../sass/cv.scss */
+#index #table-of-content {
+  position: fixed;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: scroll;
+  height: 80%; }
+
+#index li, #index ol {
+  padding: 7px; }
+
 #content {
   margin-left: 30%;
   position: relative;
   max-width: 100%; }
-  /* line 134, ../sass/cv.scss */
-  #content h1 {
-    font-size: 2em;
-    margin-bottom: 0.3em; }
+
+#content h1 {
+  font-size: 2em;
+  margin-bottom: .3em; }
 
 @media screen and (max-width: 1082px) {
-  /* line 142, ../sass/cv.scss */
   #mobile-menu {
     visibility: visible;
     border-top: 1px solid black;
@@ -120,89 +138,78 @@ body {
     z-index: 100;
     position: fixed;
     text-align: center;
-    background: red;
+    background: white;
     margin: 0;
     padding: 20px;
-    width: 30%; }
-    /* line 153, ../sass/cv.scss */
-    #mobile-menu button {
-      margin: 0;
-      margin-right: 40px;
-      border: 0;
-      font-size: 100%;
-      border-bottom: 1px solid black;
-      background: white; }
-
-  /* line 163, ../sass/cv.scss */
+    width: 29.5%; }
+  #mobile-menu button {
+    margin: 0;
+    margin-right: 40px;
+    border: 0;
+    font-size: 100%;
+    border-bottom: 1px solid black;
+    background: white; }
   #index {
     display: none;
     margin: 0 auto; }
-    /* line 166, ../sass/cv.scss */
-    #index #table-of-content {
-      padding-bottom: 80px;
-      padding-top: 3%;
-      padding-left: 2%;
-      z-index: 3;
-      background: white;
-      width: 100%;
-      font-size: 110%;
-      /* height: 80%; */
-      bottom: 0; }
-
-  /* line 178, ../sass/cv.scss */
+  #index #table-of-content {
+    padding-bottom: 80px;
+    padding-top: 3%;
+    padding-left: 2%;
+    z-index: 3;
+    background: white;
+    width: 100%;
+    font-size: 110%;
+    /* height: 80%; */
+    bottom: 0; }
   #content {
     margin: 0 auto; } }
+
 @media screen and (max-width: 771px) {
-  /* line 185, ../sass/cv.scss */
   #content {
     margin: 10px;
     width: 92%; }
-
-  /* line 189, ../sass/cv.scss */
   .year {
     width: 100%; } }
-/* line 195, ../sass/cv.scss */
+
 .menu {
   display: block;
   width: 500px;
   height: 100%;
   background-color: blue; }
-  /* line 201, ../sass/cv.scss */
-  .menu ul li {
-    display: inline;
-    float: left;
-    list-style: none; }
 
-/* line 209, ../sass/cv.scss */
+.menu ul li {
+  display: inline;
+  float: left;
+  list-style: none; }
+
 img.smaller {
   height: 50%;
   width: 50%;
   margin: 0 auto;
   display: block; }
 
-/* line 215, ../sass/cv.scss */
 img.small {
   height: 60%;
   width: 60%;
   display: block;
   margin: 0 auto; }
 
-/* line 222, ../sass/cv.scss */
 .cv-title {
   margin-top: 10px;
   text-align: center; }
-  /* line 225, ../sass/cv.scss */
-  .cv-title h3 {
-    margin-right: 255px;
-    letter-spacing: 1.5px; }
-  /* line 229, ../sass/cv.scss */
-  .cv-title h1 {
-    font-size: 2em; }
-  /* line 232, ../sass/cv.scss */
-  .cv-title .menu {
-    margin-left: 50px;
-    font-size: 2em; }
-    /* line 235, ../sass/cv.scss */
-    .cv-title .menu li {
-      border-bottom: 2px solid #646464;
-      padding-bottom: 10px; }
+
+.cv-title h3 {
+  margin-right: 255px;
+  letter-spacing: 1.5px; }
+
+.cv-title h1 {
+  font-size: 2em; }
+
+.cv-title .menu {
+  margin-left: 50px;
+  font-size: 2em; }
+
+.cv-title .menu li {
+  border-bottom: 2px solid #646464;
+  padding-bottom: 10px; }

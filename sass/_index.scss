@@ -1,37 +1,70 @@
+// .fp-viewing-hjem-1 {
+//   background-color: #86A4E7;
+// }
+body {
+  background-color: #86A4E7;
+  overflow: hidden;
+}
+.loading {
+  text-align: center;
+  font-size: 15em;
+  position: absolute;
+  z-index: 10;
+  float: left;
+}
 //2. front page
+$nameFontSize: 2.5em;
+$titleFontSize: 1.995em;
 .title-wrap {
   text-align: center;
-  margin-top: -200px;
+  margin-top: -10em;
   h1, h3 {
-    padding: .2em;
+    // padding: .2em;
+    color: white;
+  }
+  .title {
+    // margin-top: -40px;
   }
   h1 {
+    letter-spacing: 2px;
+    font-size: $nameFontSize;
     display: inline-block;
-    font-size: 3em;
+    margin-bottom: -1px;
+    // font-size: 3em;
+    @include bp(small) {
+      font-size: $nameFontSize;
+    }
     @include bp(medium) {
-      font-size: 4em;
+      $nameFontSize: 4em;
     }
     @include bp(large) {
-      font-size: 7em;
+      // $nameFontSize: 6.65em;
+      // margin-top: 2em;
+      font-size: $nameFontSize * 2.5;
     }
   }
   h3 {
-    color: black;
+    margin-top: -30px;
     display: inline-block;
-    font-weight: 100;
-    font-size: 2.2em;
-    margin-top: -55px;
-
+    font-weight: 300;
+    font-size: $titleFontSize;
+    // letter-spacing: 1px;
+    @include bp(small) {
+      // font-size: 1em;
+      $titleFontSize: 3em;
+    }
     // font-size: 5.1em;
     @include bp(medium) {
-      font-size: 2.92em;
+      // font-size: 2.92em;
     }
     @include bp(large) {
-      font-size: 5.1em;
+      font-size: 4.77em;
+      // font-size: 6em;
     }
   }
 }
 .nav {
+  color: white;
   margin: 10%;
   font-size: 2em;
   text-decoration: none;
@@ -44,17 +77,20 @@
     }
   }
   .to-folio {
-    margin: 0 auto;
-    width: 100%;
-    position: absolute;
-    left: 1px;
-    bottom: 10%;
-    i {
-      width: 100%;
-      float: left;
-      margin: 0 auto;
-
-
+    position: fixed;
+    width: 25%;
+    @include bp(large) {
+      font-size: 2em;
+      width: 26%;
+    }
+    bottom: 0;
+    // margin: 0 auto;
+    // width: 100%;
+    // position: absolute;
+    // left: 1px;
+    // bottom: 10px;
+    p {
+      margin-top: -20px;
     }
   }
   .to-about {
